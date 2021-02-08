@@ -1,0 +1,4 @@
+p == &i; --> O valor dessa expressão booleana é 1, pois ela é true.
+*p-*q; --> 3-5 = -2
+**&p; --> 
+3-*p/(*q) + 7; --> 
