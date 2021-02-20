@@ -1,0 +1,24 @@
+O uso de ponteiros em funções permite um método de passagem de valor para a função com nome de "Chamada por referência", 
+a qual permite passar o endereço do argumento para a função, e para isso devem ser usados ponteiros para  os endereços.
+
+A seguir, uma função troca: 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void troca(int *a, int *b) {
+int c;
+c = *a;
+*a = *b;
+*b = c;
+}
+
+int main() {
+ int a, b;
+ printf("Digite a, depois digite b: \n");
+ scanf("%d %d",&a,&b);
+  void troca(int *, int *);
+   printf("a=%d, b=%d\n", a, b);
+   troca(&a, &b);
+   printf("a=%d, b=%d\n", a, b);
+}
