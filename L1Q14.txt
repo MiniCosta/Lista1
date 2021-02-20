@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int compare(const void * a, const void * b) {
+    return (*(float*)a - *(float*)b);
+
+    /*
+    Compara dois elementos
+        Caso o valor retornado seja < 0, o valor apontado por a
+        fica antes do valor apontado por b;
+
+        Caso o valor retornado seja 0, não é necessário mudança nas posições;
+
+        Caso o valor retornado seja > 0, o valor apontado por a
+        fica depois do valor apontado por b
+    */
+}
+
+int main() {
+    int n = 7, i;
+    float *p;
+    p = (float *) malloc(n*sizeof(float));
+    /* a função malloc reserva o espaço de memória dado no seu argumento
+    nesse caso, o valor reservado é o produto de n (número de elementos no vetor)
+    e o espaço de memória ocupado em bits pelo tipo float (4) */
+
+    for(i = 0; i < n; i++) {
+        printf("Digite um valor: ");
+        scanf("%f", &p[i]); // entrada dos valores
+    }
+
+    qsort(p, n, sizeof(float), compare);
+    /* a função qsort() recebe como parâmetros um vetor (nesse caso o ponteiro p),
+    o número de elementos desse vetor, o tamanho do tipo dos elementos do vetor
+    e por fim, a função de comparação, para reorganizar o vetor */
+
+
+    for(i = 0; i < n; i++) {
+        printf("%f\n", p[i]); // imprime os valores do vetor
+    }
+
+    free(p); // libera o espaço de memória reservado anteriormente pela função malloc
+
+    return 0;
+}
