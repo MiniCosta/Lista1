@@ -1,0 +1,5 @@
+p --> endereço de p na memória em hexadecimal (61fe1c)
+*p+2 --> 7
+**&p --> 5
+3**p --> 3*5 = 15
+**&p+4 --> 5 + 4 = 9  
