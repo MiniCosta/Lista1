@@ -1,0 +1,7 @@
+Os inválidos: 
+scanf("%f", &aloha);
+aloha = value";
+coisas[5] = aloha;
+pf = value;
+
+Os demais são válidos

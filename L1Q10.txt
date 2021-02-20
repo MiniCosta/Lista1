@@ -1,0 +1,10 @@
+Utilizando o código:
+
+char x[4];
+ printf("%d\n", x);
+ printf("%d\n", x +1);
+ printf("%d\n", x +2);
+ printf("%d\n", x +3);
+
+Foi possível verificar que os tipos char, float e double ocuparam o númrero de bytes esperados. Entretanto, o tipo int ocu-
+pou 4 bytes ao invés de 2.

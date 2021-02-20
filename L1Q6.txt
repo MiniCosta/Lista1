@@ -1,0 +1,2 @@
+Apenas *(pulo + 2), pois *(pulo + 4) se referencia ao quinto elemento do vetor, e os outros dois se referem a endereços de
+memória.

@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int n = 7, i, x;
+    float *p;
+    p = (float *) malloc(n*sizeof(float));
+
+    for(i = 0; i < n; i++) {
+        printf("Digite um valor: ");
+        scanf("%f", &p[i]);
+    }
+
+    for(i = 0; i < n; i++) {
+        for(int j = i + 1; j < n; j++) {
+            if(p[j] < p[i]) {
+                x = p[i];
+                p[i] = p[j];
+                p[j] = x;
+            }
+        }
+    }
+
+    for(i = 0; i < n; i++) {
+        printf("%f\n", p[i]);
+    }
+
+    free(p);
+
+    return 0;
+}
